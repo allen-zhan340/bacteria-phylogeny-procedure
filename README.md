@@ -5,19 +5,26 @@ The procedure of construct a phylogenetic tree
 
 ### 1.介绍
 
+### 2.软件需求
+基因组功能注释软件: prokka
 
-### 2. 程序一站式直接运行
 
+
+### 3. 程序一站式直接运行
+
+直接打包下载这些程序，然后直接运行`tree_build_orthofinder.py`程序即可。
 ```powershell
-python 
-
+python tree_build_orthofinder.py -i genomes -a faa_dir -t 10
 ```
+> -i: 基因组所在的文件夹
+> -a: 注释的蛋白所在的文件夹
+> -t: 线程数
 
-### 3. 系统发育树构建流程(自己分步做)
+### 4. 系统发育树构建流程(自己分步做)
 ##### 1.选择基因组
 选择自己的基因组（`fasta`格式的）。
 ##### 2. 序列注释(得到蛋白序列) 
-`prokka`是原核生物功能注释的很强大的工具，构建系统发育树之前需要对所有的基因组进行注释。
+`prokka`是原核生物功能注释的很强大的工具，构建系统发育树之前需要对所有的基因组进行注释。以`GCA_000069185.1`为例
 
 ```powershell
 prokka --outdir GCA_000069185.1 --prefix GCA_000069185.1 --noanno --cpus 8 --locustag 'GCA_000069185.1|ORF' GCA_000069185.1_genomic.fna
