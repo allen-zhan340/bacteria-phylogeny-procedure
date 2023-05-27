@@ -7,6 +7,9 @@ The procedure of construct a phylogenetic tree
 
 ### 2.软件需求
 基因组功能注释软件: prokka
+基因组比对软件: clustalo
+基因组模糊位点过滤: Gblocks
+系统发育树构建软件: iqtree
 
 
 
