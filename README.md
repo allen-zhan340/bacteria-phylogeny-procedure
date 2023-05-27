@@ -13,7 +13,7 @@ The procedure of construct a phylogenetic tree
 
 
 
-### 3. 程序一站式直接运行
+### 3. 程序一站式直接运行（一步搞定）
 
 直接打包下载这些程序，然后直接运行`tree_build_orthofinder.py`程序即可。
 ```powershell
